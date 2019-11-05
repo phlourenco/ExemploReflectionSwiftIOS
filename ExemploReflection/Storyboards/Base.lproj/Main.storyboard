@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bgx-tH-kp2">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="PbC-lx-bOO">
+            <objects>
+                <navigationController id="bgx-tH-kp2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IJY-hS-PXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GNH-7g-QOa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Mm-x4-jTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-740" y="137"/>
+        </scene>
+        <!--Formulário-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExemploReflection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojL-vk-pyX">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0L-xt-sVn">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ze1-y2-Dsw">
+                                                <rect key="frame" x="16" y="16" width="343" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label em design-time. Sera removida ao gerar o formulario" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uD-E3-M0N">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ze1-y2-Dsw" firstAttribute="top" secondItem="h0L-xt-sVn" secondAttribute="top" constant="16" id="EPj-xq-PcZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="ze1-y2-Dsw" secondAttribute="trailing" constant="16" id="ONG-Xq-DYB"/>
+                                            <constraint firstItem="ze1-y2-Dsw" firstAttribute="leading" secondItem="h0L-xt-sVn" secondAttribute="leading" constant="16" id="d5U-e1-o89"/>
+                                            <constraint firstAttribute="bottom" secondItem="ze1-y2-Dsw" secondAttribute="bottom" constant="16" id="yxm-f5-Y8d"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="h0L-xt-sVn" firstAttribute="leading" secondItem="ojL-vk-pyX" secondAttribute="leading" id="2OZ-MN-AWx"/>
+                                    <constraint firstItem="h0L-xt-sVn" firstAttribute="top" secondItem="ojL-vk-pyX" secondAttribute="top" id="KJy-lw-2Hd"/>
+                                    <constraint firstAttribute="trailing" secondItem="h0L-xt-sVn" secondAttribute="trailing" id="Kok-iu-9qn"/>
+                                    <constraint firstItem="h0L-xt-sVn" firstAttribute="width" secondItem="ojL-vk-pyX" secondAttribute="width" id="kdA-Fd-D4f"/>
+                                    <constraint firstAttribute="bottom" secondItem="h0L-xt-sVn" secondAttribute="bottom" id="kiL-qU-6a6"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ojL-vk-pyX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8g0-lf-Fhl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ojL-vk-pyX" secondAttribute="trailing" id="QAQ-fu-BYB"/>
+                            <constraint firstItem="ojL-vk-pyX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aRj-Kg-3m7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ojL-vk-pyX" secondAttribute="bottom" id="lz5-Vy-h84"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Formulário" id="44l-Ux-LGB">
+                        <barButtonItem key="rightBarButtonItem" title="Continuar" id="zQd-0x-uZl">
+                            <connections>
+                                <action selector="continueButton:" destination="BYZ-38-t0r" id="sjU-xZ-h0Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="stackView" destination="ze1-y2-Dsw" id="rDO-B9-8Lm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
